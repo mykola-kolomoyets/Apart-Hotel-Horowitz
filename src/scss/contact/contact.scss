@@ -1,0 +1,375 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.contact {
+	top: 5rem;
+}
+
+.contacts-page {
+	.fullpage-header__block {
+		background-color: transparent;
+	}
+}
+
+.page-title {
+	position: relative;
+	font-size: 4.8rem;
+	text-align: center;
+	padding-bottom: 5.5rem;
+
+	&::after {
+		position: absolute;
+		content: "";
+		left: 50%;
+		transform: translate(-50%, -50%);
+		bottom: 0;
+		width: 250px;
+		height: 35px;
+		background-image: url(./../../img/horowitz-decor-orange.svg);
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		background-repeat: no-repeat;
+	}
+}
+
+.contact__form--title {
+	display: none;
+}
+
+.contact {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	height: calc(100vh - 14rem);
+
+	overflow: hidden;
+
+	&__data {
+		margin-bottom: 5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.contact__phones-mails {
+			margin-bottom: 2rem;
+			.contact__phones {
+				margin-bottom: 2rem;
+			}
+		}	
+
+		.contact__phones,
+		.contact__mails {
+			position: relative;
+			font-size: 1.6rem;
+			padding-left: 5rem;
+
+			&::after {
+				position: absolute;
+				content: "";
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%) scale(.75);
+				width: 5rem;
+				height: 5rem;
+				-webkit-transform: translateY(-50%) scale(.75);
+				-moz-transform: translateY(-50%) scale(.75);
+				-ms-transform: translateY(-50%) scale(.75);
+				-o-transform: translateY(-50%) scale(.75);
+				background-repeat: no-repeat;
+				background-position: center center;
+}
+		}
+
+
+		.contact__phones::after {
+			background-image: url(./../../img/contact__phone-icon.svg);
+		}
+
+		.contact__mails {
+			padding-left: 5rem;
+		}
+
+		.contact__mails::after {
+			background-image: url(./../../img/contact__mail-icon.svg);
+		}
+
+		.contact__form {
+			&--title {
+				position: relative;
+				font-size: 3.6rem;
+				padding-bottom: 4rem;
+				text-align: center;
+
+				&::after {
+					position: absolute;
+					content: "";
+					left: 50%;
+					transform: translate(-50%, -50%);
+					bottom: 0;
+					width: 150px;
+					height: 20px;
+					background-image: url(./../../img/horowitz-decor-orange.svg);
+					-webkit-transform: translate(-50%, -50%);
+					-moz-transform: translate(-50%, -50%);
+					-ms-transform: translate(-50%, -50%);
+					-o-transform: translate(-50%, -50%);
+					background-repeat: no-repeat;
+				}
+			}
+
+			&--subtitle {
+				position: relative;
+				font-size: 1.3rem;
+				text-align: left;
+				line-height: 1.2;
+				margin-bottom: 2rem;
+				opacity: .5;
+			}
+		}
+	}
+	&__content {
+		font-family: "Raleway-Regular";
+		position: relative;
+		// margin-top: 5rem;
+		width: 100vw;
+		height: 70%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	&__form {
+		position: relative;
+		width: 50vw;
+		height: auto;
+		margin: 0;
+		padding: 0 2rem;
+
+		&--inputs {
+			width: 80%;
+			margin: 5rem auto 0 auto;
+			position: relative;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+
+
+	&__form--input-group {
+		position: relative;
+		margin: 2rem 0;
+
+		label {
+			position: absolute;
+			top: .2rem;
+			font-size: 1.4rem;
+			margin: 1rem;
+			padding: .2rem 1rem;
+			cursor: text;
+			background-color: white;
+			color: $royal-gold;
+			z-index: 2;
+			transition: all .3s ease;
+			-webkit-transition: all .3s ease;
+			-moz-transition: all .3s ease;
+			-ms-transition: all .3s ease;
+			-o-transition: all .3s ease;
+
+			&.contact_form--label-active {
+				top: -2rem;
+			}
+		}
+
+		input,
+		textarea {
+			position: relative;
+			width: 100%;
+			padding: 1.2rem 1.7rem;
+			margin: 0;
+			border: .2rem solid $royal-gold;
+			color: $royal-gold;
+			resize: vertical;
+			font-size: 1.4rem;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&.input-with-btn {
+			margin-top: 0;
+		}
+
+	}
+
+	&__form--message {
+		min-height: 10rem;
+		max-height: 40rem;
+	}
+
+	&__form--submit {
+		position: relative;
+		// position: absolute;
+		background-color: $royal-gold;
+		color: white;
+		border: .2rem solid $royal-gold;
+		padding: .8rem 8rem;
+		bottom: 0;
+		left: 0;
+		min-width: 300px;
+		font-size: 1.4rem;
+		cursor: pointer;
+		transition: all .3s ease;
+		-webkit-transition: all .3s ease;
+		-moz-transition: all .3s ease;
+		-ms-transition: all .3s ease;
+		-o-transition: all .3s ease;
+
+		&:hover {
+			background-color: white;
+			color: $royal-gold;
+		}
+	}
+
+	&__map {
+		position: relative;
+		width: 50vw;
+		margin: 0;
+		padding: 0;
+
+		iframe {
+			position: relative;
+			top: 0;
+			padding: 0;
+			width: 100%;
+			height: 90%;
+			border: none;
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.contact__first-row {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0;
+
+	&  .contact__form--input-group {
+		margin-bottom: 2rem;
+	}
+
+	.contact__form--input-group {
+		width: 100%;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.contact__form--input-group + .contact__form--input-group {
+		width: 100%;
+		margin-top: 2rem;
+		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: 1110px) {
+
+	.contact__form--submit {
+		display: block;
+		max-width: 250px;
+		margin: 0 auto;
+		height: 5rem;
+		font-size: 1.8rem;
+	}
+
+	.contact__phones-mails {
+		margin-bottom: 3rem;
+	}
+
+	.contact {
+		padding-top: 8rem;
+		position: relative;
+		height: auto;
+		justify-content: flex-start;
+
+		&__map {
+			position: relative;
+			width: 100vw;
+			height: 100vh;
+
+			iframe {
+				position: relative;
+				height: 100%;
+			}
+		}
+	}
+
+	.contact__first-row {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		.contact__form--input-group {
+			width: 100%;
+
+		}
+
+		.contact__form--input-group+.contact__form--input-group {
+			margin-top: 2rem;
+		}
+	}
+
+	.contact__form--inputs {
+		width: 100%;
+	}
+
+	.contact__content {
+		position: relative;
+		flex-direction: column;
+		margin-top: 2rem;
+
+		.contact__form {
+			width: 100vw;
+		}
+	}
+
+	.contact__data .contact__form--subtitle {
+		font-size: 1.6rem;
+	} 
+}
+
+@media screen and (max-width: 1090px) {
+	.contact__title {
+		font-size: 3.6rem;
+		&::after {
+			width: 20rem;
+		}
+	}
+
+	.contact__form--title {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.contacts-page {
+		.fullpage-header__block {
+			background-color: white;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.contact__form--submit {
+		min-width: 100%;
+		padding: 0;
+	}
+}

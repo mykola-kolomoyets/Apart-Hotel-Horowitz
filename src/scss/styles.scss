@@ -1,0 +1,68 @@
+@import '_vars.scss';
+@import '_mixins.scss';
+@import '_fonts.scss';
+
+// & === COMMON STYLES === &
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@media (max-width: 980px) {
+	.container {
+		padding: 0;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.mobile-map,
+.benefits-mobile-img,
+.history-mobile-img {
+	display: none;
+}
+
+.fullscreen {
+	transition: transform .56s ease;
+	-webkit-transition: transform .56s ease;
+	-moz-transition: transform .56s ease;
+	-ms-transition: transform .56s ease;
+	-o-transition: transform .56s ease;
+}
+
+// & === === === &
+
+// @import '_header-dropdown.scss';
+@import '_header.scss';
+@import '_sections.scss';
+@import './apartments-page/apartments-page.scss';
+@import './apartment-template/apartment-template.scss';
+@import './contact/contact.scss';
+@import './gallery/gallery.scss';
+@import './booking/booking.scss';
+@import './booking/booking-results.scss';
+@import '_footer.scss';
+
+@import '_scroll-up.scss';
+
+@import './on-service/on-service';
+@import './404/404';
+
+@import '_animations.scss';
+@import '_media.scss';

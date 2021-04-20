@@ -1,0 +1,718 @@
+.booking-results {
+
+	ul {
+		list-style-type: none;
+	}
+
+	hr {
+		width: 80%;
+		margin: 5rem auto;
+		position: relative;
+
+		&::after {
+			position: absolute;
+			content: "";
+			width: 1rem;
+			height: 1rem;
+			left: calc(50% - .5rem);
+			top: -.5rem;
+			background-color: $royal-gold;
+			border-radius: 50%;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			-ms-border-radius: 50%;
+			-o-border-radius: 50%;
+		}
+	}
+
+	&__intro {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+	}
+
+	&__background {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		object-fit: cover;
+		filter: brightness(.7);
+		-webkit-filter: brightness(.7);
+	}
+
+	&__content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+	}
+
+	&__title {
+		font-family: "YesevaOne-Regular";
+		font-weight: 300;
+		font-size: 6.4rem;
+		color: white;
+	}
+
+	&__decor {
+		position: relative;
+	}
+
+	&__scroll-down {
+		position: absolute;
+		bottom: 8rem;
+		left: 50%;
+
+		z-index: 10;
+
+		img {
+			width: 4rem;
+			height: 4rem;
+		}
+	}
+
+	&__apartments {
+		width: 100%;
+		min-height: 100vh;
+		position: relative;
+		padding-top: 8rem;
+
+		&--title {
+			font-family: "YesevaOne-Regular";
+			font-weight: 300;
+			font-size: 3.2rem;
+			text-align: center;
+		}
+
+		&--data {
+			font-family: "Raleway-Regular";
+			font-weight: 300;
+			position: relative;
+			width: 35rem;
+			margin: 3rem auto;
+			font-size: 2rem;
+
+			li {
+				color: $royal-gold;
+				margin: .75rem 0;
+
+				span {
+					color: black;
+				}
+			}
+
+		}
+	}
+}
+
+.booking-results {
+
+	&__apartments--list {}
+
+	&__apartments--card {
+		width: 100%;
+		height: 35rem;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		&+& {
+			margin-top: 5rem;
+		}
+
+		picture {
+			position: relative;
+			height: 35rem;
+
+			img {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__card--content {
+		position: relative;
+		border-top: 1px solid $royal-gold;
+		border-right: 1px solid $royal-gold;
+		border-bottom: 1px solid $royal-gold;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 9rem 5rem 13rem 7rem;
+		padding-left: 3.5rem;
+	}
+
+	&__card--title {
+		font-family: "YesevaOne-Regular";
+		font-weight: 300;
+		grid-column: 1/-1;
+		font-size: 3rem;
+		margin-top: 3rem;
+		color: $royal-blue;
+	}
+
+	&__card--data {
+		font-family: "Raleway-Medium";
+		grid-column: 1/-1;
+		display: flex;
+		font-size: 1.6rem;
+		margin-left: 2.5rem;
+
+		li {
+			color: $royal-gold;
+
+			span {
+				color: $royal-blue;
+			}
+		}
+
+		li+li {
+			margin-left: 3.5rem;
+		}
+
+	}
+
+	&__card--benefits {
+		font-family: "Raleway-Regular";
+		grid-column: 1/3;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		li {
+			position: relative;
+			font-size: 1.3rem;
+			margin: .1rem 1.5rem .1rem 0;
+			padding-left: 2.5rem;
+
+			&::before {
+				position: absolute;
+				content: "";
+				width: 2rem;
+				height: 1.5rem;
+				top: 0;
+				left: 0;
+				background-image: url(./../../img/check-icon.svg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: left center;
+				z-index: 1;
+				transform: scale(.8);
+				-webkit-transform: scale(.8);
+				-moz-transform: scale(.8);
+				-ms-transform: scale(.8);
+				-o-transform: scale(.8);
+			}
+		}
+	}
+
+	&__card--adds {
+		font-family: "Raleway-Regular";
+		font-size: 1.3rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		p {
+			font-family: "Raleway-Medium";
+			color: $royal-gold;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__card--input-block {
+		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: flex-end;
+		padding-left: 1.2rem;
+
+		label {
+			padding-left: .7rem;
+		}
+
+		input {
+			position: absolute;
+			appearance: none;
+
+			&:checked+.booking-results__card--checkbox,
+			&:focus:checked+.booking-results__card--checkbox {
+				width: 1em;
+				background-image: url(./../../img/check-icon.svg);
+				background-size: cover;
+				background-position: left center;
+				border: none;
+			}
+
+			&:focus+.booking-results__card--checkbox {
+				border: 2px solid $royal-gold;
+			}
+		}
+
+		span.booking-results__card--checkbox {
+			position: absolute;
+			width: 1em;
+			height: 1em;
+
+			border: 2px solid $royal-blue;
+			border-radius: 2px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-left: -1.2em;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			-ms-border-radius: 2px;
+			-o-border-radius: 2px;
+		}
+
+		&+& {
+			margin-top: 2rem;
+		}
+	}
+
+	&__card--price {
+		font-family: "Raleway-Medium";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		margin: 0 0 3rem 6rem;
+
+		h5 {
+			font-size: 3.4rem;
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content: "UAH/night";
+				font-size: 1.1rem;
+				top: .5rem;
+				left: 100%;
+			}
+		}
+	}
+
+	&__card--buttons {
+		font-family: "Raleway-Medium";
+		display: flex;
+		align-items: center;
+		grid-column: 2/-1;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 5.5rem;
+
+		a {
+			position: relative;
+			display: block;
+			margin: 0 3rem 0 0;
+			font-size: 1.4rem;
+			color: $royal-gold;
+
+			&:hover {
+				&::after {
+					transform: scaleX(1);
+					-webkit-transform: scaleX(1);
+					-moz-transform: scaleX(1);
+					-ms-transform: scaleX(1);
+					-o-transform: scaleX(1);
+				}
+			}
+
+			&::after {
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 0.2rem;
+				background-color: $royal-gold;
+				bottom: -.5rem;
+				left: 0;
+				transition: transform .3s ease;
+				transform: scaleX(0);
+				transform-origin: left;
+				-webkit-transition: transform .3s ease;
+				-moz-transition: transform .3s ease;
+				-ms-transition: transform .3s ease;
+				-o-transition: transform .3s ease;
+			}
+		}
+
+		button {
+			display: block;
+			height: 100%;
+			border: none;
+			background-color: $royal-gold;
+			border: 1px solid transparent;
+			color: white;
+			width: 15rem;
+			font-size: 1.8rem;
+			cursor: pointer;
+			transition: all .3s ease;
+
+			&:hover {
+				border-top: 1px solid $royal-gold;
+				border-left: 1px solid $royal-gold;
+				background-color: transparent;
+				color: black;
+			}
+		}
+	}
+
+	&__card--room-details {}
+}
+
+.booking-results__apartments--card {
+	margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 920px) {
+	.booking-results {
+
+		&__card--title {
+			font-size: 2.4rem;
+		}
+
+		&__card--data {
+			align-items: center;
+		}
+
+		&__card--price {
+			margin-bottom: 1.2rem;
+			margin-left: 5rem;
+
+			h5 {
+				font-size: 2.8rem;
+			}
+		}
+
+		&__card--buttons {
+			height: inherit;
+
+			a {
+				font-size: 1.2rem;
+				margin-right: 1.2rem;
+			}
+
+			button {
+				height: 4rem;
+				width: 12rem;
+				font-size: 1.4rem;
+			}
+		}
+
+		&__card--adds {
+			width: 100%;
+			grid-column: 1/-1;
+			display: flex;
+			margin-top: 1rem;
+
+			p {
+				margin-bottom: 1rem;
+			}
+
+			.booking-results__card--input-block+.booking-results__card--input-block {
+				margin: 0 0 0 3rem;
+			}
+
+		}
+
+		&__card--inputs {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			width: 100%;
+
+
+		}
+
+		&__card--benefits {
+			grid-column: 1/-1;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__card--content {
+			position: relative;
+			border-top: 1px solid $royal-gold;
+			border-right: 1px solid $royal-gold;
+			border-bottom: 1px solid $royal-gold;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 6rem 6rem 10rem 6rem 4rem;
+			padding-left: 3.5rem;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.booking-results__apartments--card {
+		margin-bottom: 10rem;
+	}
+
+	.booking-results__card--input-block span.booking-results__card--checkbox {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.booking-results__card--input-block input:checked+.booking-results__card--checkbox, .booking-results__card--input-block input:focus:checked+.booking-results__card--checkbox {
+		width: 1.5rem;
+	}
+
+
+	.booking-results {
+		.booking-results__card--content {
+			border-top: none;
+			border-right: none;
+		}
+
+		&__apartments--card {
+			grid-template-columns: auto;
+			min-height: 700px;
+			// margin-bottom: 5rem;
+		}
+
+		&__card--title {
+			font-size: 3.4rem;
+		}
+
+		&__card--data {
+			align-items: center;
+
+			li {
+				font-size: 1.8rem;
+			}
+		}
+
+		&__card--price {
+			margin-bottom: 4rem;
+			margin-left: 6rem;
+
+			h5 {
+				font-size: 4.8rem;
+			}
+		}
+
+		&__card--buttons {
+			a {
+				font-size: 1.8rem;
+				margin-right: 1.8rem;
+			}
+
+			button {
+				height: 8rem;
+				width: 22rem;
+				font-size: 3.2rem;
+			}
+		}
+
+		&__card--adds {
+			grid-column: 3/-1;
+			margin-top: 0;
+
+			p {
+				margin-bottom: 1rem;
+				font-size: 2rem;
+			}
+
+			label {
+				font-size: 1.8rem;
+			}
+
+			.booking-results__card--input-block+.booking-results__card--input-block {
+				margin: 1.75rem 0 0 0;
+			}
+
+		}
+
+		&__card--inputs {
+			display: block;
+		}
+
+		&__card--benefits {
+			grid-column: 1/3;
+			grid-template-columns: repeat(2, 1fr);
+
+			li {
+				font-size: 1.8rem;
+				margin-bottom: 0.3rem;
+			}
+		}
+
+		&__card--content {
+			position: relative;
+			border-top: 1px solid $royal-gold;
+			border-right: 1px solid $royal-gold;
+			border-bottom: 1px solid $royal-gold;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 6rem 6rem 13rem 6rem 8rem;
+			padding-left: 3.5rem;
+		}
+	}
+}
+
+@media screen and (max-width: 580px) {
+
+	.booking-results__apartments--card {
+		margin-bottom: 10rem;
+	}
+
+	.booking-results__title {
+		font-size: 4.8rem;
+	}
+
+	.booking-results__intro {
+		width: 100%;
+	}
+
+	.booking-results__apartments--title {
+		font-size: 2.4rem;
+	}
+
+	.booking-results__apartments--data {
+		font-size: 1.4rem;
+	}
+	.booking-results {
+		position: relative;
+
+		&__card--title {
+			font-size: 1.8rem;
+			grid-area: title;
+		}
+
+		&__card--data {
+			align-items: center;
+			grid-area: data;
+
+			li {
+				font-size: 1.3rem;
+			}
+		}
+
+		&__card--price {
+			margin-bottom: 1.2rem;
+			margin-left: 2rem;
+			grid-area: price;
+			grid-column: 1/3;
+
+			h5 {
+				font-size: 3.2rem;
+			}
+		}
+
+		&__card--buttons {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-end;
+
+			a {
+				font-size: 1.4rem;
+				// margin-right: 1.2rem;
+				grid-column: 3/-1;
+				grid-row: 5/6;
+				padding: 2rem;
+				
+			}
+
+			button {
+				height: 4rem;
+				width: 100vw;
+				font-size: 1.8rem;
+			}
+		}
+
+		&__card--adds {
+			width: 100%;
+			grid-column: 1/-1;
+			display: flex;
+			margin-top: 1rem;
+			grid-area: adds;
+
+			p {
+				margin-bottom: 1rem;
+			}
+
+			.booking-results__card--input-block+.booking-results__card--input-block {
+				margin: 0 0 0 3rem;
+			}
+
+		}
+
+		&__card--inputs {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			width: 100%;
+		}
+
+		&__card--benefits {
+			grid-column: 1/-1;
+			grid-template-columns: repeat(3, 1fr);
+			font-size: 0.9rem;
+			grid-area: benefits;
+		}
+
+		&__card--content {
+			position: relative;
+			border-top: 1px solid $royal-gold;
+			border-right: 1px solid $royal-gold;
+			border-bottom: 1px solid $royal-gold;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 6rem 6rem 12rem 5rem 7rem 4rem;
+			grid-template-areas: "title title title"
+														"data data data"
+														"benefits benefits benefits"
+														"adds adds adds"
+														"price price price"
+														"btns btns btns";
+			padding-left: 3.5rem;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.booking-results__card--benefits li,
+	.booking-results__card--input-block label {
+		font-size: 1.2rem;
+	}
+	
+	.booking-results__card--adds p {
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (max-width: 380px) {
+
+	.booking-results__title {
+		font-size: 3.6rem;
+	}
+
+	.booking-results__apartments--title {
+		font-size: 1.8rem;
+	}
+
+	.booking-results__card--content {
+		padding-left: 1.5rem;
+	}
+
+
+	.booking-results__card--benefits li,
+	.booking-results__card--input-block label {
+		font-size: 1rem;
+	}
+	
+	.booking-results__card--adds p {
+		font-size: 1.2rem;
+	}
+
+	.booking-results__apartments--data {
+		width: 100vw;
+		padding: 0 2rem;
+	}
+}

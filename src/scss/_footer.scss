@@ -1,0 +1,126 @@
+/* ============== */
+/* === FOOTER === */
+/* ============== */
+
+footer {
+	background-color: $royal-blue;
+	min-height: 140px;
+	font-family: "Raleway";
+	font-weight: 500;
+	color: white;
+}
+
+.footer__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer__title {
+	font-family: "YesevaOne-Regular";
+	font-weight: 400;
+	position: relative;
+	font-size: 24px;
+	line-height: 36px;
+	text-align: center;
+	margin-bottom: 35px;
+}
+
+.footer__text,
+.footer__contacts-links a,
+address.footer__address-text {
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	color: white;
+}
+
+.footer__block {
+	margin: 10px 0;
+}
+
+.footer__title::after {
+	content: "";
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	width: 87px;
+	height: 15px;
+	background-image: url(../img/footer-title-decor-white.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+.footer__hotel {
+	width: 345px;
+}
+
+.footer__contacts {
+	width: 250px;
+}
+
+.footer__address {
+	width: 150px;
+}
+
+.footer__contacts-links > a {
+	display: block;
+	text-align: center;
+}
+
+.footer__contacts--phones {
+	display: flex;
+	justify-content: center;
+
+	span {
+		font-size: 170%;
+		padding-top: 0.2rem;
+	}
+}
+
+address.footer__address-text {
+	text-decoration: none;
+	font-style: normal;
+}
+
+.footer__copyright {
+	display: block;
+	background-color: black;
+	min-height: 100px;
+	padding: 0 0 40px 0;
+}
+
+.footer__copyright-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 45px;
+}
+
+.footer__list {
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	font-weight: 400;
+}
+
+.footer__list-item + .footer__list-item {
+	margin-left: 35px;
+}
+
+.footer__copyright-text {
+	color: $menu-color;
+}
+
+.footer__list-item a {
+	color: white;
+	text-decoration: none;
+}
+
+.footer__list-item a:hover {
+	text-decoration: underline;
+}

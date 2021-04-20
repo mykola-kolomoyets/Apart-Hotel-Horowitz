@@ -1,0 +1,14 @@
+
+div.datedropper.horowitz-date {
+
+  --dd-color1: #e2b55d;
+  --dd-color2: #e2b55;
+  --dd-color3: #4D4D4D;
+  --dd-color4: #FFF;
+
+  --dd-radius: 0px;
+  --dd-width: 197px;
+  --dd-shadow: 0 0 33px 4px rgba(0, 0, 0, 0.26);
+  background-color: #fff;
+}
+

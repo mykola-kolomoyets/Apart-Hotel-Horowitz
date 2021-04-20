@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Horowitz - Apartments</title>
+	<link rel="stylesheet" href="../../css/libs.min.css">
+	<link rel="stylesheet" href="../../css/styles.min.css">
+</head>
+<body class="apartments page-with-slider">
+	@@include('../../_header.html')
+	<!-- & === === & -->
+
+	<div class="apartments__intro">
+		<img class="apartments__background" src="../../img/apartments-page-bg.jpg" alt="background" />
+		<div class="apartments__content">
+			<h1 class="apartments__title animate__animated animate__fadeInDown">Apartments</h1>
+		<img class="apartments__decor animate__animated animate__fadeInDown animate__delay-1s" src="./../../img/horowitz-decor.svg" alt="Lemberg style decor">
+		</div>
+		
+		<a class="apartments__scroll-down animate__animated animate__fadeInDown animate__delay-2s" href="#slider">
+			<img src="../../img/scroll-down-arrow.svg" alt="scroll down">
+		</a>
+	</div>
+	<!-- & === === & -->
+	@@include('_apartments-slider.html')
+	<!-- & === === & -->
+	@@include('_apartments-list.html')
+	<!-- & === === & -->
+	@@include('../../_footer.html')
+	<!-- & === === & -->
+	@@include('../../_scroll-up.html')
+
+	<script src="../../js/libs/jquery-3.5.1.min.js"></script>
+	<script src="../../js/libs/swiper-bundle.min.js"></script>
+	<script src="../../js/libs/aos.min.js"></script>
+	<script src="../../js/script.min.js"></script>
+</body>
+</html>

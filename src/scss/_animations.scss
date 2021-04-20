@@ -1,0 +1,38 @@
+/* ================== */
+/* === ANIMATIONS === */
+/* ================== */
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: rotateX(-90deg);
+		-webkit-transform: rotateX(-90deg);
+		-moz-transform: rotateX(-90deg);
+		-ms-transform: rotateX(-90deg);
+		-o-transform: rotateX(-90deg);
+	}
+	50% {
+		transform: rotateX(20deg);
+		-webkit-transform: rotateX(20deg);
+		-moz-transform: rotateX(20deg);
+		-ms-transform: rotateX(20deg);
+		-o-transform: rotateX(20deg);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateX(0deg);
+		-webkit-transform: rotateX(0deg);
+		-moz-transform: rotateX(0deg);
+		-ms-transform: rotateX(0deg);
+		-o-transform: rotateX(0deg);
+	}
+}
+
+@keyframes start_animation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
