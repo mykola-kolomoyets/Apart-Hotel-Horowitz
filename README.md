@@ -1,5 +1,7 @@
 # Apart-Hotel-Horowitz
- New design of Apart-Hotel Horowitz website
+New design of Apart-Hotel Horowitz website
+
+You can visit the site itself [here](https://horowitz.com.ua/):
 
 ##### Used languages:
 
